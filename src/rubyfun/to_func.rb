@@ -1,6 +1,6 @@
 module RubyFun
   class ::Symbol
-    def [] receiver
+    def [] receiver = Object.new
       ->(*args){ receiver.__send__ self, *args }
     end
   end

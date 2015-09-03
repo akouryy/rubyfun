@@ -1,1 +1,1 @@
-require_relative 'rubyfun/underscore'
+require_relative 'rubyfun/to_func'
