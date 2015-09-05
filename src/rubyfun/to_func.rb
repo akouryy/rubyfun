@@ -48,7 +48,9 @@ module RubyFun
             outer_args[o] = inner_args[i]
           end
         end
-        p outer_args
+        if placeholders.empty?
+          outer_args += inner_args
+        end
         fn.call *outer_args
       }
     else
@@ -60,4 +62,6 @@ module RubyFun
     PlaceHolder.new i
   end
   X = PlaceHolder.new
+
+  module_function :L, :X
 end
